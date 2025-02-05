@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('image_path')->nullable();
             $table->string('first_name')->nullable();
             $table->string('surname')->nullable();
+            $table->string('year')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

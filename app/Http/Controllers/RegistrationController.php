@@ -15,6 +15,8 @@ class RegistrationController extends Controller
     }
 
     public function processRegistration(Request $request){
+
+        //Validate user information
         // $request->validate([
         //     'first_name' => 'required|string|max:250',
         //     'surname' => 'required|string|max:250',
@@ -24,18 +26,18 @@ class RegistrationController extends Controller
         //     'password' => 'required|min:8|confirmed'
         // ]);
 
-      
-        
-
+        // Create user using model
         User::create([
             'first_name' => $request->first_name,
             'surname' => $request->surname,
             'phone_number' => $request->phone_number,
             'email' => $request->email,
             'username' => $request->username,
+            'year'=> $request->year,
             'password' => Hash::make($request->password)
         ]);
 
+        //Log in user after registration
         // $credentials = $request->only('username', 'password');
         // Auth::attempt($credentials);
         // $request->session()->regenerate();

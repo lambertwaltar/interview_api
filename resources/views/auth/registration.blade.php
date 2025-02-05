@@ -41,6 +41,11 @@
                                 </select>
                             </div>
 
+                            <div class="form-group">
+                                <label class="form-control-label">Year</label>
+                                <input type="number" class="form-control" name="year" required>
+                            </div>
+
                             <hr>
                             <div class="form-group">
                                 <label class="form-control-label">Username</label>
